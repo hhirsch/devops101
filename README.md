@@ -1,6 +1,11 @@
 # devops101
 
 ## SSL
+>Create PK.
+
+```
+openssl genrsa -out yourdomain.key 2048
+```
 
 >Create CSR.
 
