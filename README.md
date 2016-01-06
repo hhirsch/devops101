@@ -16,5 +16,5 @@ openssl req -new -newkey rsa:2048 -nodes -keyout yourdomain.key -out yourdomain.
 >Concat Certificates
 
 ```
-awk 'FNR==1{print ""}1' *.crt >> chained.crt
+cat certificate.crt <(echo) intermediate.crt <(echo) root.crt > chained.crt
 ```
