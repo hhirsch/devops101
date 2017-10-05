@@ -19,6 +19,10 @@ openssl req -new -newkey rsa:2048 -nodes -keyout yourdomain.key -out yourdomain.
 cat certificate.crt <(echo) intermediate.crt <(echo) root.crt > chained.crt
 ```
 
+Without root certificate
+```
+cat certificate.crt <(echo) intermediate.crt > chained.crt  
+```
 ### Extract the data from pkcs12 encoded files.
 
 ```
