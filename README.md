@@ -34,3 +34,6 @@ openssl pkcs12 -in domain.pfx -clcerts -nokeys -out domain.cer openssl pkcs12 -i
 ```
 openssl req -subj '/CN=domain.com/O=My Company Name LTD./C=US' -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout server.key -out server.crt
 ```
+
+### Check SSL-Certificate validity
+```openssl x509 -enddate -noout -in cert.crt```
