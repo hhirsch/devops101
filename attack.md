@@ -16,5 +16,10 @@ Then you can see how many requests the attacker made.
 grep -ir "attacker ip" ./ | wc -l 
 ```
 
+Or to get a list of the most interesting IPs you can use the following command:
+```
+cat /var/log/nginx/access.log | cut -d" " -f1 | sort | uniq -c | sort -rn | less
+```
+
 But it is urgent to immediately start dropping the attackers IP packets.
 So maybe stop probing around and get rid of him.
